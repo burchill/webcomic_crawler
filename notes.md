@@ -20,11 +20,9 @@ However, we need to figure out exactly what needs to be done and who's going to 
 
 If you want to get TONS of webcomics incredibly rapidly (perhaps without the intelligent part of any of this), then check out [http://www.webtoons.com/en/](http://www.webtoons.com/en/). They're all on the same system, so it'll be darn easy to get data from them.
 
-## Unread new/comments ---------------------------------------------------
+## Unread new/comments ------------------------------------------
 
-Ok, given that you suck at Python evidently, let's focus on getting some preliminary data first and then you can get working on the model in R or something.  The problem with using webtoons is that we don't know 
-
-
+Ok, given that you suck at Python evidently, let's focus on getting some preliminary data first and then you can get working on the model in R or something.
 
 ## Small mini-projects
 
