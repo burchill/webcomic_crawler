@@ -37,4 +37,49 @@ Ok, given that you suck at Python evidently, let's focus on getting some prelimi
 
 [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) is really easy to learn, and very simple.  It just takes an HTML page and turns it into a tree based on the structure of the HTML elements.  Each element is a node, and all the elements in that node are its children nodes.  After you turn a webpage into the tree (called a soup, I guess) you can just search it for the elements you want.
 
-For example, after you turn a 
+Although the `web_scraper.py` file is my _old_ version, it might make things more clear. It's less flexible than the new one.  But let's look at how it gets the Broodhollow comic (`get_broodhollow()`).
+
+```python
+def get_broodhollow():
+    r = urllib.request.urlopen('http://broodhollow.chainsawsuit.com/').read()
+    soup = BeautifulSoup(r)
+```
+
+This loads the comic and turns it into a soup object
+    
+```python    
+    date_format="%B %d, %Y"
+    date_csv_s="post_date,cadavre"
+    prev_url=""
+ ```
+ 
+ This sets the date format so that it can turn a string of the date into an actual date, and labels the two columns that will be used in the .csv file
+
+```python
+    while (True):
+        date = datetime.strptime(soup.find(brood_is_date).contents[0],date_format)
+```
+
+```
+     
+        title_text = list(soup.find(brood_is_title).strings)[0]
+        is_cadavre="cadavre" in title_text or "Cadavre" in title_text
+        date_csv_s+="\n"+date.strftime("%x")+","+str(is_cadavre)
+        
+        try:
+            prev_comic_soup = soup.find_all(brood_is_prev_comic)[0]
+            if prev_comic_soup["href"]==prev_url:
+                break
+            r = urllib.request.urlopen(prev_comic_soup["href"]).read()
+            soup = BeautifulSoup(r)
+            prev_url=prev_comic_soup["href"]
+        except:
+            print(prev_url)
+            print(prev_comic_soup["href"])
+            break
+        
+    with open("/Users/zburchill/Desktop/broodhollow_dates.csv","w") as f:
+        f.write(date_csv_s)    
+    print(len(date_csv_s.splitlines()))
+
+```
