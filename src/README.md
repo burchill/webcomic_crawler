@@ -1,6 +1,6 @@
 
 
-# Required reading ;)
+## Required reading ;)
 
 Right now, to get up to date, check out `web_scraper_threaded_general.py` for the basic functions, and `comic_archive.py` for how I'm currently dealing with the archive of finished webcomics.  The file `auto_crawler.py` is where I was starting work on the automated web crawler, but then I found some other potential options.
 
@@ -34,4 +34,8 @@ In my research, I found a bunch of useful links:
  * https://doc.scrapy.org/en/1.3/topics/architecture.html#topics-architecture
  * https://twistedmatrix.com/documents/current/core/howto/defer-intro.html
 
-The gist of this is that there's already a seemingly easy-to-use web crawler package for Python, as well as a package for graph building / analysis.  The web crawler, `scrapy`, is built on some weird asychronous shit called `twisted`, which we might need to use if we can't use out-of-the-box stuff for `scrapy`.
+The gist of this is that there's already a seemingly easy-to-use web crawler package for Python, as well as a package for graph building / analysis.  The web crawler, `scrapy`, is built on some weird asychronous shit called `twisted`, which we might need to use if we can't use out-of-the-box stuff for `scrapy`.  I don't think it would be hard to modify what I already have, though.
+
+## Push it to the limit
+
+What would be another cool project in and of itself, would be to get all these graphs, and then use machine learning so that the graph analysis algorithm learns to find the comic pages by itself.  Presumably all we'd need is labelled data and some basic supervised learning algorithm.  I'm not an expert on that, but I bet any of our CS friends from high school would know.
