@@ -128,3 +128,7 @@ Then I write the string to the .csv file:
     print(len(date_csv_s.splitlines()))
 
 ```
+
+### With threads
+
+The threaded version (`web_scraper_threaded_general.py`) is very similar, but uses threads and is written to be more adaptable.  You can see how that changes things.  Just modify it based on the examples given to scrape something else.  The important difference with threads is that there is a "global lock" which is so that two threads don't try to change the same variable at the same time.  The variable they're changing there is writing to the `csv_string` string, and so each time they want to access it they have to go through `csv_string_lock`.
