@@ -18,4 +18,4 @@ But we need more than just a few webcomics.  **In some ways, each webcomic is on
 
 My first idea was to make a web scraper that would get all the links on a page that stayed on that site and that it hadn't been to before, log all the connections between the current page and these links (as well as data currently on the page), and then open them all up and do the same thing.  In essence, creating a directed graph of the site.  With a few prior assumptions, you could generally use this structure to automatically get all the pages that were comic posts, rather than links to the store, etc.
 
-![Alt Text](/../../directed_graph.png)
+![Alt Text](webcomic_crawler/directed_graph.png)
