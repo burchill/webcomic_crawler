@@ -10,8 +10,8 @@ However, we need to figure out exactly what needs to be done and who's going to 
 
 ##Things to do:
 
- *Filler
- *Be magic
+ * Filler
+ * Be magic
 
 ##Notes, comments, other news
 
