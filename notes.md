@@ -27,6 +27,7 @@ Ok, given that you suck at Python evidently, let's focus on getting some prelimi
 ## Small mini-projects
 
  * Harvest the webtoons.com / https://tapastic.com/ data.  We won't really know whether a comic is "dead" or not, but it will help anyway.  It would also help you learn how to use the web scraper I made so far.  Probably the best way for you to do this would be to get it so that it scrapes **one** comic first (e.g., owlturd/"blue chair").  Once you get that working, then you should know enough so that you can scrape http://www.webtoons.com/en/challenge/list?listType=league&genre=ALL&sortOrder=LIKEIT for, like, links to the top 500 webcomics, and then scrape those individually.
+     + For the tapastic comics, they generate content with Javascript, which our scraper can't deal with. However, I realized all the relevant info was accessible in a pseudo-JSON format in the code.  I wrote a lot of ugly code, but it can extract all the information from the first page of a tapastic comic. (Uncomment `temp_wrapper(tapastic)` in `comic_archive.py` and it will run the code on all the tapastic comics.)
  * [Read how `networkx` works](https://networkx.github.io/documentation/networkx-1.10/tutorial/tutorial.html).  (I don't know it any better than you, and you don't need to know more than minimal Python anyway)
  * [Go through the incredibly easy `scrapy` tutorial](https://doc.scrapy.org/en/1.3/intro/tutorial.html)
  * 
