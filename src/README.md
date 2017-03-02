@@ -6,8 +6,14 @@ Right now, to get up to date, check out `web_scraper_threaded_general.py` for th
 
 # The general idea
 
-So, if you didn't already check the source files on the blog post on my website, you can check the basic implementation of the threaded code there.  I've actually written a lot of comments in the code, so you can understand it better.  For the slightly more advanced version, check `web_scraper_threaded_general.py`.
+### Web scraping
 
-Basically, it's pretty easy to adjust a few little parameters to make something that collects the time data we want from a webcomic.  You just need to know where the "next" button is, where they put their time in the HTML, and that's it, I think.  **However, in some ways, each webcomic is only going to have a single relevant datapoint** (i.e. the last time it updated) **so we need to get a lot**.  This makes hand-coding each webcomic pretty tedious.
+It's pretty easy to adjust a few little parameters to make something that collects the time data we want from a webcomic. (If you didn't already check the source files on the blog post on my website, you can check the basic implementation of the threaded code there.  I've actually written a lot of comments in the code, so you can understand it better. For the slightly more advanced version, check `web_scraper_threaded_general.py`.) You just need to know where the "next" button is, where they put their time in the HTML, and that's it, I think.  I've written a web scraper that will go through and collect all the relevant data.
 
-## 
+## Automatic web crawling
+
+But we need more than just a few webcomics.  **In some ways, each webcomic is only going to have a single relevant datapoint** (i.e. the last time it updated) **so we need to get a lot**.  The one datapoint thing isn't 100% true, but I believe the type of model we'd want to means it's basically true. Hand-coding each webcomic would be pretty tedious, even if we made a GUI.  However, it's relatively easy, and relatively cool, to make something that would do this automatically.  If we had something like this, we could also apply the model to all sorts of content creator data sets, like Youtubers, etc.
+
+## Building a directed graph of a webcomic
+
+My first idea was to 
