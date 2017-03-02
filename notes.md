@@ -3,8 +3,10 @@
 #The Plan
 
 So who's who and what we gonna do? As far as I (Andrew) know now, there are just two people involved with this project (although I'm pretty sure more might be added):
-*Zach Burchill
-*Andrew Burchill
+* Zach Burchill
+ * Skills: python, R, too much free time
+* Andrew Burchill
+ * Skills: genius, R, double genius (isn't super familiar with python)
 
 However, we need to figure out exactly what needs to be done and who's going to do it.
 
